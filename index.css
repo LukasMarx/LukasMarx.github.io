@@ -241,12 +241,10 @@ footer {
   .card-container {
     padding: 32px;
   }
-}
 
-@media only screen and (max-width: 600px) {
   .card {
     grid-template-columns: 1fr;
-    padding: 32px;
+    padding: 0px;
     box-shadow: none;
   }
 }
