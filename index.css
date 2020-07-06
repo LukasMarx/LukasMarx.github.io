@@ -235,6 +235,7 @@ footer {
   gap: 64px;
   box-sizing: border-box;
   width: 100%;
+  background-color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -243,9 +244,11 @@ footer {
   }
 
   .card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 0px;
     box-shadow: none;
+    min-height: 0; /* NEW */
+    min-width: 0; /* NEW; needed for Firefox */
   }
 }
 
@@ -316,6 +319,26 @@ footer {
   }
 
   .jukify-image-container {
+    grid-row: 1;
+  }
+}
+
+.malcoded-image-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.malcoded-image {
+  height: 340px;
+}
+
+@media only screen and (max-width: 600px) {
+  .malcoded-image {
+    height: 100px;
+  }
+
+  .malcoded-image-container {
     grid-row: 1;
   }
 }
