@@ -131,6 +131,7 @@ footer {
   overflow: hidden;
   position: relative;
   filter: grayscale(1);
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .image {
